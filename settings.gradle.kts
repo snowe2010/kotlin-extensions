@@ -8,3 +8,4 @@
  */
 
 rootProject.name = "kotlin-extensions"
+include("kotlin-extensions-array")

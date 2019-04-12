@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.tylerthrailkill.helpers.kotlin-extensions.iml" filepath="$PROJECT_DIR$/.idea/modules/com.tylerthrailkill.helpers.kotlin-extensions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kotlin-extensions-array/com.tylerthrailkill.helpers.kotlin-extensions-array.iml" filepath="$PROJECT_DIR$/.idea/modules/kotlin-extensions-array/com.tylerthrailkill.helpers.kotlin-extensions-array.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kotlin-extensions-array/com.tylerthrailkill.helpers.kotlin-extensions-array.main.iml" filepath="$PROJECT_DIR$/.idea/modules/kotlin-extensions-array/com.tylerthrailkill.helpers.kotlin-extensions-array.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kotlin-extensions-array/com.tylerthrailkill.helpers.kotlin-extensions-array.test.iml" filepath="$PROJECT_DIR$/.idea/modules/kotlin-extensions-array/com.tylerthrailkill.helpers.kotlin-extensions-array.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.tylerthrailkill.helpers.kotlin-extensions.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.tylerthrailkill.helpers.kotlin-extensions.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.tylerthrailkill.helpers.kotlin-extensions.test.iml" filepath="$PROJECT_DIR$/.idea/modules/com.tylerthrailkill.helpers.kotlin-extensions.test.iml" />
     </modules>
