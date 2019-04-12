@@ -4,7 +4,6 @@ package com.tylerthrailkill.helpers.kotlin.extensions.time
 
 import com.tylerthrailkill.helpers.kotlin.extensions.number.roundDiv
 import com.tylerthrailkill.helpers.kotlin.extensions.standard.with
-import me.carleslc.kotlin.extensions.time.nanoseconds
 import java.io.PrintStream
 import java.math.MathContext
 import java.time.Duration
@@ -40,7 +39,7 @@ object Durations {
     /** Duration from [ago] to current [millis()][millis] */
     fun fromMillis(ago: Long) = Duration.ofMillis(millis() - ago)
 
-    /** Use this method only if [nanos] is extracted from [nanos()][me.carleslc.kotlin.extensions.time.nanos], otherwise resulting duration will be unexpected */
+    /** Use this method only if [nanos] is extracted from [nanos()][com.tylerthrailkill.helpers.kotlin.extensions.time.nanos], otherwise resulting duration will be unexpected */
     fun fromSystemNanos(nanos: Long): Duration = betweenNanos(nanos, nanos())
 
 }

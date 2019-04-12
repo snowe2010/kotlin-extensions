@@ -1,0 +1,8 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Ignore generated files" />
+    <inspection_tool class="BashUnresolvedVariable" enabled="true" level="WARNING" enabled_by_default="true">
+      <scope name="Inspections without generated files" level="INFORMATION" enabled="true" />
+    </inspection_tool>
+  </profile>
+</component>

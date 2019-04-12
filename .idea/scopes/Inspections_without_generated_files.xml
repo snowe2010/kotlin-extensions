@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="Inspections without generated files" pattern="!gradlew&amp;&amp;!lib:*..*" />
+</component>
