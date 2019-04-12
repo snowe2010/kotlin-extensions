@@ -1,6 +1,6 @@
 @file:Suppress("NOTHING_TO_INLINE", "UNUSED_PARAMETER")
 
-package me.carleslc.kotlin.extensions.collections
+package com.tylerthrailkill.helpers.kotlin.extensions.collections
 
 import java.util.Random
 import java.util.Collections

@@ -1,9 +1,9 @@
 @file:Suppress("NOTHING_TO_INLINE")
 
-package me.carleslc.kotlin.extensions.conversions
+package com.tylerthrailkill.helpers.kotlin.extensions.conversions
 
 import arrow.data.Try
-import me.carleslc.kotlin.extensions.standard.getOrNull
+import com.tylerthrailkill.helpers.kotlin.extensions.standard.getOrNull
 
 inline fun Long.toBoolean() = when (this) {
     0L -> false

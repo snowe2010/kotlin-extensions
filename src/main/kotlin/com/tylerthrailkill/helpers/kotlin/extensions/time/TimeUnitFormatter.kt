@@ -1,4 +1,4 @@
-package me.carleslc.kotlin.extensions.time
+package com.tylerthrailkill.helpers.kotlin.extensions.time
 
 import java.util.concurrent.TimeUnit
 

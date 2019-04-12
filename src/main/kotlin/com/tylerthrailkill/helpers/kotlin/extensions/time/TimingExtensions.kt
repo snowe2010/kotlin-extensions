@@ -1,9 +1,10 @@
 @file:Suppress("NOTHING_TO_INLINE")
 
-package me.carleslc.kotlin.extensions.time
+package com.tylerthrailkill.helpers.kotlin.extensions.time
 
-import me.carleslc.kotlin.extensions.number.roundDiv
-import me.carleslc.kotlin.extensions.standard.with
+import com.tylerthrailkill.helpers.kotlin.extensions.number.roundDiv
+import com.tylerthrailkill.helpers.kotlin.extensions.standard.with
+import me.carleslc.kotlin.extensions.time.nanoseconds
 import java.io.PrintStream
 import java.math.MathContext
 import java.time.Duration

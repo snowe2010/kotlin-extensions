@@ -1,8 +1,18 @@
 @file:Suppress("NOTHING_TO_INLINE")
 
-package me.carleslc.kotlin.extensions.preconditions
+package com.tylerthrailkill.helpers.kotlin.extensions.preconditions
 
-import me.carleslc.kotlin.extensions.standard.*
+import com.tylerthrailkill.helpers.kotlin.extensions.standard.andThrow
+import com.tylerthrailkill.helpers.kotlin.extensions.standard.defaultBigDecimal
+import com.tylerthrailkill.helpers.kotlin.extensions.standard.defaultBigInteger
+import com.tylerthrailkill.helpers.kotlin.extensions.standard.defaultByte
+import com.tylerthrailkill.helpers.kotlin.extensions.standard.defaultDouble
+import com.tylerthrailkill.helpers.kotlin.extensions.standard.defaultFloat
+import com.tylerthrailkill.helpers.kotlin.extensions.standard.defaultInt
+import com.tylerthrailkill.helpers.kotlin.extensions.standard.defaultLong
+import com.tylerthrailkill.helpers.kotlin.extensions.standard.defaultShort
+import com.tylerthrailkill.helpers.kotlin.extensions.standard.defaultString
+import com.tylerthrailkill.helpers.kotlin.extensions.standard.with
 import java.math.BigDecimal
 import java.math.BigInteger
 

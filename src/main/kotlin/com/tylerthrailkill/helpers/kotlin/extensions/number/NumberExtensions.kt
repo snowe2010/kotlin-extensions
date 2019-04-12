@@ -1,10 +1,10 @@
 @file:Suppress("NOTHING_TO_INLINE")
 
-package me.carleslc.kotlin.extensions.number
+package com.tylerthrailkill.helpers.kotlin.extensions.number
 
 import com.google.common.math.DoubleMath
 import com.google.common.math.LongMath
-import me.carleslc.kotlin.extensions.strings.toFixed
+import com.tylerthrailkill.helpers.kotlin.extensions.strings.toFixed
 import java.math.BigDecimal
 import java.math.RoundingMode
 

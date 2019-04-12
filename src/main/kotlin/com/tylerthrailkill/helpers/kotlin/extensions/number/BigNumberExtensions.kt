@@ -1,6 +1,6 @@
 @file:Suppress("NOTHING_TO_INLINE")
 
-package me.carleslc.kotlin.extensions.number
+package com.tylerthrailkill.helpers.kotlin.extensions.number
 
 import com.google.common.math.BigIntegerMath
 import java.math.BigDecimal

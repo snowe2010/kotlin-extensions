@@ -1,11 +1,11 @@
 @file:Suppress("NOTHING_TO_INLINE")
 
-package me.carleslc.kotlin.extensions.standard
+package com.tylerthrailkill.helpers.kotlin.extensions.standard
 
 import arrow.data.Try
 import arrow.data.getOrDefault
 import arrow.data.getOrElse
-import me.carleslc.kotlin.extensions.preconditions.requireSize
+import com.tylerthrailkill.helpers.kotlin.extensions.preconditions.requireSize
 import java.io.PrintStream
 import java.math.BigDecimal
 import java.math.BigInteger

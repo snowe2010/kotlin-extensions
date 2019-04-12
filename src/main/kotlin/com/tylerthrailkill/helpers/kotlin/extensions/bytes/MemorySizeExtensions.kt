@@ -1,13 +1,13 @@
 @file:Suppress("NOTHING_TO_INLINE", "UNUSED_PARAMETER")
 
-package me.carleslc.kotlin.extensions.bytes
+package com.tylerthrailkill.helpers.kotlin.extensions.bytes
 
 fun getMemoryUsage(transform: (Long, Long, Long, Long, Int) -> String = { total, free, max, usage, percent -> "$usage / $max MB in use ($percent%)" }): Pair<Int, String> {
     val total = Runtime.getRuntime().totalMemory().bytes.toMegaBytes
     val free = Runtime.getRuntime().freeMemory().bytes.toMegaBytes
     val max = Runtime.getRuntime().maxMemory().bytes.toMegaBytes
     val usage = total - free
-    val percent = ((usage.toDouble()/max) * 100).toInt()
+    val percent = ((usage.toDouble() / max) * 100).toInt()
     return percent to transform(total, free, max, usage, percent)
 }
 

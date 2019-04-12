@@ -1,6 +1,6 @@
 @file:Suppress("NOTHING_TO_INLINE")
 
-package me.carleslc.kotlin.extensions.tuples
+package com.tylerthrailkill.helpers.kotlin.extensions.tuples
 
 inline fun <A, B> Pair<A, B>.joinToString(
         separator: CharSequence = ", ",

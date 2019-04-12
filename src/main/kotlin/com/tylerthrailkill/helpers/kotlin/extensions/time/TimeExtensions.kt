@@ -1,6 +1,6 @@
 @file:Suppress("NOTHING_TO_INLINE", "UNUSED_PARAMETER")
 
-package me.carleslc.kotlin.extensions.time
+package com.tylerthrailkill.helpers.kotlin.extensions.time
 
 import java.text.SimpleDateFormat
 import java.time.*

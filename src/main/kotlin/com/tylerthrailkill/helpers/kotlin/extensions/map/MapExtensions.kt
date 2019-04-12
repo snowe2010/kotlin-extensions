@@ -1,9 +1,9 @@
 @file:Suppress("NOTHING_TO_INLINE")
 
-package me.carleslc.kotlin.extensions.map
+package com.tylerthrailkill.helpers.kotlin.extensions.map
 
-import me.carleslc.kotlin.extensions.strings.wrapString
-import me.carleslc.kotlin.extensions.tuples.joinToString
+import com.tylerthrailkill.helpers.kotlin.extensions.strings.wrapString
+import com.tylerthrailkill.helpers.kotlin.extensions.tuples.joinToString
 
 object M {
     inline operator fun <K, V> get(vararg pairs: Pair<K, V>): Map<K, V> = mapOf(*pairs)

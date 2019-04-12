@@ -1,9 +1,9 @@
 @file:Suppress("NOTHING_TO_INLINE")
 
-package me.carleslc.kotlin.extensions.html
+package com.tylerthrailkill.helpers.kotlin.extensions.html
 
-import me.carleslc.kotlin.extensions.map.joinToString
-import me.carleslc.kotlin.extensions.tuples.joinToString
+import com.tylerthrailkill.helpers.kotlin.extensions.map.joinToString
+import com.tylerthrailkill.helpers.kotlin.extensions.tuples.joinToString
 
 typealias Attributes = Map<String, String>
 

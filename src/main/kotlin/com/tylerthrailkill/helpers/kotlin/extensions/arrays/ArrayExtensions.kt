@@ -2,7 +2,7 @@
 
 package com.tylerthrailkill.helpers.kotlin.extensions.arrays
 
-import me.carleslc.kotlin.extensions.collections.timesToListOf
+import com.tylerthrailkill.helpers.kotlin.extensions.collections.timesToListOf
 import java.util.*
 
 typealias Matrix<T> = Array<Array<T>>

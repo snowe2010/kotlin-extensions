@@ -1,11 +1,11 @@
 @file:Suppress("NOTHING_TO_INLINE")
 
-package me.carleslc.kotlin.extensions.strings
+package com.tylerthrailkill.helpers.kotlin.extensions.strings
 
 import com.cesarferreira.pluralize.pluralize
 import com.cesarferreira.pluralize.singularize
 import com.google.common.base.Strings
-import me.carleslc.kotlin.extensions.standard.letOrElse
+import com.tylerthrailkill.helpers.kotlin.extensions.standard.letOrElse
 
 inline infix operator fun String.times(n: Int): String = Strings.repeat(this, n)
 inline infix operator fun Int.times(s: String): String = Strings.repeat(s, this)
