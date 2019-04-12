@@ -1,6 +1,6 @@
 @file:Suppress("NOTHING_TO_INLINE")
 
-package me.carleslc.kotlin.extensions.arrays
+package com.tylerthrailkill.helpers.kotlin.extensions.arrays
 
 import me.carleslc.kotlin.extensions.collections.timesToListOf
 import java.util.*

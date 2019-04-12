@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id="kotlin-extensions:main" external.linked.project.path="$MODULE_DIR$/../.." external.root.project.path="$MODULE_DIR$/../.." external.system.id="GRADLE" external.system.module.group="com.tylerthrailkill.helpers" external.system.module.type="sourceSet" external.system.module.version="0.0.1" type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="kotlin-language" name="Kotlin">
+      <configuration version="3" platform="JVM 1.6" useProjectSettings="false">
+        <compilerSettings />
+        <compilerArguments>
+          <option name="destination" value="$MODULE_DIR$/../../build/classes/kotlin/main" />
+          <option name="classpath" value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk8/1.3.21/d0634d54452abc421db494ad32dd215e6591c49f/kotlin-stdlib-jdk8-1.3.21.jar;C:/Users/Tyler/.gradle/caches/modules-2/files-2.1/io.arrow-kt/arrow-syntax/0.6.1/d999c8dccc1ccec8627b8b2b9fb0166b4f4b72ec/arrow-syntax-0.6.1.jar;C:/Users/Tyler/.gradle/caches/modules-2/files-2.1/io.arrow-kt/arrow-instances/0.6.1/26f876ba1b37f9a0ec22b14ce463c18a9774cd1c/arrow-instances-0.6.1.jar;C:/Users/Tyler/.gradle/caches/modules-2/files-2.1/io.arrow-kt/arrow-data/0.6.1/4f275730520f0bf89bf3c56855527894c1ddbf99/arrow-data-0.6.1.jar;C:/Users/Tyler/.gradle/caches/modules-2/files-2.1/io.arrow-kt/arrow-typeclasses/0.6.1/4c071087f2e04366f7baafce39e5f2b53312a26a/arrow-typeclasses-0.6.1.jar;C:/Users/Tyler/.gradle/caches/modules-2/files-2.1/io.arrow-kt/arrow-core/0.6.1/98034afc517da7595b3c8c6c3124e50bc23285f7/arrow-core-0.6.1.jar;C:/Users/Tyler/.gradle/caches/modules-2/files-2.1/com.github.cesarferreira/kotlin-pluralizer/0.2.9/c400e4920b5e58cb7e2faba2c1fb8f99955bacb0/kotlin-pluralizer-0.2.9.jar;C:/Users/Tyler/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/23.3-android/7340373546b8eb380787e7bd1dad25bea53d4b6e/guava-23.3-android.jar;C:/Users/Tyler/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk7/1.3.21/d207ce2c9bcf17dc8e51bab4dbfdac4d013e7138/kotlin-stdlib-jdk7-1.3.21.jar;C:/Users/Tyler/.gradle/caches/modules-2/files-2.1/io.arrow-kt/arrow-annotations/0.6.1/37f449e58febf939ab60f8f7bc282b307c825ce5/arrow-annotations-0.6.1.jar;C:/Users/Tyler/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.21/4bcc2012b84840e19e1e28074284cac908be0295/kotlin-stdlib-1.3.21.jar;C:/Users/Tyler/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/1.3.9/40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf/jsr305-1.3.9.jar;C:/Users/Tyler/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.0.18/5f65affce1684999e2f4024983835efc3504012e/error_prone_annotations-2.0.18.jar;C:/Users/Tyler/.gradle/caches/modules-2/files-2.1/com.google.j2objc/j2objc-annotations/1.1/976d8d30bebc251db406f2bdb3eb01962b5685b3/j2objc-annotations-1.1.jar;C:/Users/Tyler/.gradle/caches/modules-2/files-2.1/org.codehaus.mojo/animal-sniffer-annotations/1.14/775b7e22fb10026eed3f86e8dc556dfafe35f2d5/animal-sniffer-annotations-1.14.jar;C:/Users/Tyler/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.21/f30e4a9897913e53d778f564110bafa1fef46643/kotlin-stdlib-common-1.3.21.jar;C:/Users/Tyler/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar;C:/Users/Tyler/.gradle/caches/modules-2/files-2.1/io.kindedj/kindedj/1.1.0/462731347602a3f24e3f21feec50928f9a657741/kindedj-1.1.0.jar" />
+          <option name="noStdlib" value="true" />
+          <option name="noReflect" value="true" />
+          <option name="moduleName" value="kotlin-extensions" />
+          <option name="addCompilerBuiltIns" value="true" />
+          <option name="loadBuiltInsFromDependencies" value="true" />
+          <option name="languageVersion" value="1.3" />
+          <option name="apiVersion" value="1.3" />
+          <option name="pluginOptions">
+            <array />
+          </option>
+          <option name="pluginClasspaths">
+            <array />
+          </option>
+          <option name="errors">
+            <ArgumentParseErrors />
+          </option>
+        </compilerArguments>
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
+    <output url="file://$MODULE_DIR$/../../out/production/classes" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../src/main">
+      <sourceFolder url="file://$MODULE_DIR$/../../src/main/kotlin" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../src/main/resources" type="java-resource" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.21" level="project" />
+    <orderEntry type="library" name="Gradle: io.arrow-kt:arrow-syntax:0.6.1" level="project" />
+    <orderEntry type="library" name="Gradle: io.arrow-kt:arrow-instances:0.6.1" level="project" />
+    <orderEntry type="library" name="Gradle: io.arrow-kt:arrow-data:0.6.1" level="project" />
+    <orderEntry type="library" name="Gradle: io.arrow-kt:arrow-typeclasses:0.6.1" level="project" />
+    <orderEntry type="library" name="Gradle: io.arrow-kt:arrow-core:0.6.1" level="project" />
+    <orderEntry type="library" name="Gradle: com.github.cesarferreira:kotlin-pluralizer:0.2.9" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.guava:guava:23.3-android" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.21" level="project" />
+    <orderEntry type="library" name="Gradle: io.arrow-kt:arrow-annotations:0.6.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.3.21" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.code.findbugs:jsr305:1.3.9" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.errorprone:error_prone_annotations:2.0.18" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.j2objc:j2objc-annotations:1.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.codehaus.mojo:animal-sniffer-annotations:1.14" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.3.21" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains:annotations:13.0" level="project" />
+    <orderEntry type="library" name="Gradle: io.kindedj:kindedj:1.1.0" level="project" />
+  </component>
+</module>
