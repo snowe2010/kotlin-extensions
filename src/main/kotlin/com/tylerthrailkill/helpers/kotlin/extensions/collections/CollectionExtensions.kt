@@ -2,8 +2,7 @@
 
 package com.tylerthrailkill.helpers.kotlin.extensions.collections
 
-import java.util.Random
-import java.util.Collections
+import java.util.*
 
 object L {
     inline operator fun <reified T> get(vararg ts: T) = if (ts.isNotEmpty()) ts.asList() else emptyList()
@@ -29,13 +28,14 @@ inline fun Iterable<String?>.trim(): List<String> = trimNulls().filterNot { it.i
 inline fun Iterable<String?>.trimToMutableList(): MutableList<String> = trimNulls().filterNotTo(mutableListOf()) { it.isBlank() }
 
 inline fun <T1, T2> Iterable<T1>.combine(other: Iterable<T2>): List<Pair<T1, T2>> = combine(other, { thisItem: T1, otherItem: T2 -> Pair(thisItem, otherItem) })
-inline fun <T1, T2> Iterable<T1>.combineToMutableList(other: Iterable<T2>): MutableList<Pair<T1, T2>> = combineToMutableList(other, { thisItem: T1, otherItem: T2 -> Pair(thisItem, otherItem) })
+inline fun <T1, T2> Iterable<T1>.combineToMutableList(other: Iterable<T2>): MutableList<Pair<T1, T2>> =
+    combineToMutableList(other, { thisItem: T1, otherItem: T2 -> Pair(thisItem, otherItem) })
 
-inline fun <T1, T2, R> Iterable<T1>.combine(other: Iterable<T2>, transform: (thisItem: T1, otherItem: T2) -> R): List<R>
-        = flatMap { thisItem -> other.map { otherItem -> transform(thisItem, otherItem) } }
+inline fun <T1, T2, R> Iterable<T1>.combine(other: Iterable<T2>, transform: (thisItem: T1, otherItem: T2) -> R): List<R> =
+    flatMap { thisItem -> other.map { otherItem -> transform(thisItem, otherItem) } }
 
-inline fun <T1, T2, R> Iterable<T1>.combineToMutableList(other: Iterable<T2>, transform: (thisItem: T1, otherItem: T2) -> R): MutableList<R>
-        = flatMapTo(mutableListOf()) { thisItem -> other.map { otherItem -> transform(thisItem, otherItem) } }
+inline fun <T1, T2, R> Iterable<T1>.combineToMutableList(other: Iterable<T2>, transform: (thisItem: T1, otherItem: T2) -> R): MutableList<R> =
+    flatMapTo(mutableListOf()) { thisItem -> other.map { otherItem -> transform(thisItem, otherItem) } }
 
 inline fun <T, R> Iterable<T>.mapToMutableList(transform: (T) -> R): MutableList<R> = mapTo(mutableListOf(), transform)
 inline fun <T, R> Iterable<T>.flatMapToMutableList(transform: (T) -> Iterable<R>): MutableList<R> = flatMapTo(mutableListOf(), transform)

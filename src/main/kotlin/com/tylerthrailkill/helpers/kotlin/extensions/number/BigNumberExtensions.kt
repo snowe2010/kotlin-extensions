@@ -30,7 +30,9 @@ inline fun BigInteger.fitsInInt(): Boolean = this in (Int.MIN_VALUE.toBigInteger
 inline fun BigDecimal.fitsInDouble(): Boolean = this in (-Double.MAX_VALUE.toBigDecimal()..Double.MAX_VALUE.toBigDecimal())
 inline fun BigDecimal.fitsInFloat(): Boolean = this in (-Float.MAX_VALUE.toBigDecimal()..Float.MAX_VALUE.toBigDecimal())
 
-tailrec fun gcd(a: BigInteger, b: BigInteger): BigInteger = if (b == BigInteger.ZERO) a else if (a.fitsInLong() && b.fitsInLong()) gcd(a.toLong(), b.toLong()).toBigInteger() else gcd(a, a % b)
+tailrec fun gcd(a: BigInteger, b: BigInteger): BigInteger =
+    if (b == BigInteger.ZERO) a else if (a.fitsInLong() && b.fitsInLong()) gcd(a.toLong(), b.toLong()).toBigInteger() else gcd(a, a % b)
+
 inline fun lcm(a: BigInteger, b: BigInteger) = a * b / gcd(a, b)
 
 inline fun BigDecimal.round(precision: Int = 1, roundingMode: RoundingMode = RoundingMode.HALF_UP): BigDecimal = round(MathContext(precision, roundingMode))

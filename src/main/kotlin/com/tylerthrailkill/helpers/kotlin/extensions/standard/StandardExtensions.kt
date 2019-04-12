@@ -91,7 +91,8 @@ inline fun <T> T.print(outStream: PrintStream = System.out, noinline transform: 
 
 inline fun <T, R> T.println(outStream: PrintStream = System.out, what: (T) -> R): R = what(this).apply { outStream.println(this) }
 
-inline fun <T> T.println(tag: String = "", separator: String = " = ", outStream: PrintStream = System.out): T = also { outStream.println(if (tag.isBlank()) it else "$tag$separator$it") }
+inline fun <T> T.println(tag: String = "", separator: String = " = ", outStream: PrintStream = System.out): T =
+    also { outStream.println(if (tag.isBlank()) it else "$tag$separator$it") }
 
 inline fun <A, B, C> ((A, B) -> C).flip(): (B, A) -> C = { a, b -> this(b, a) }
 
@@ -107,9 +108,11 @@ inline fun <T1, T2, T3, R> ((T1, T2, T3) -> R).with(param1: T1, param2: T2, para
 
 inline fun <T1, T2, T3, T4, R> ((T1, T2, T3, T4) -> R).with(param1: T1, param2: T2, param3: T3, param4: T4): () -> R = { this(param1, param2, param3, param4) }
 
-inline fun <T1, T2, T3, T4, T5, R> ((T1, T2, T3, T4, T5) -> R).with(param1: T1, param2: T2, param3: T3, param4: T4, param5: T5): () -> R = { this(param1, param2, param3, param4, param5) }
+inline fun <T1, T2, T3, T4, T5, R> ((T1, T2, T3, T4, T5) -> R).with(param1: T1, param2: T2, param3: T3, param4: T4, param5: T5): () -> R =
+    { this(param1, param2, param3, param4, param5) }
 
-inline fun <T1, T2, T3, T4, T5, T6, R> ((T1, T2, T3, T4, T5, T6) -> R).with(param1: T1, param2: T2, param3: T3, param4: T4, param5: T5, param6: T6): () -> R = { this(param1, param2, param3, param4, param5, param6) }
+inline fun <T1, T2, T3, T4, T5, T6, R> ((T1, T2, T3, T4, T5, T6) -> R).with(param1: T1, param2: T2, param3: T3, param4: T4, param5: T5, param6: T6): () -> R =
+    { this(param1, param2, param3, param4, param5, param6) }
 
 inline fun <T, R> ((T) -> R).collapseParams(): (Array<T>) -> R = { a -> a.requireSize(1); this(a[0]) }
 

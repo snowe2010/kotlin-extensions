@@ -57,7 +57,7 @@ inline fun <reified T> matrix(rows: Int, cols: Int, init: (Int, Int) -> T): Matr
 }
 
 inline fun <reified T> matrixOf(rows: Int, cols: Int, init: T): Matrix<T> {
-    return matrix(rows, cols) { _,_ -> init }
+    return matrix(rows, cols) { _, _ -> init }
 }
 
 inline fun <reified T> matrixOfNulls(rows: Int, cols: Int): Matrix<T> = matrix(rows, cols) { _, _ -> null as T }

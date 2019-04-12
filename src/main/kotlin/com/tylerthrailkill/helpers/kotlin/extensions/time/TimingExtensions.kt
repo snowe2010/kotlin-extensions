@@ -54,19 +54,26 @@ inline fun <T> measureAndReturn(block: () -> T): Pair<Duration, T> {
     return duration to ret
 }
 
-inline fun <T> measureAndPrint(limit: TimeUnit = TimeUnit.NANOSECONDS,
-                           formatter: TimeUnitFormatter = TimeUnitFormatter.LONG,
-                           roundingLast: MathContext = MathContext(1),
-                           noinline transformation: ((String) -> String)? = null,
-                           outputStream: PrintStream = System.out,
-                           block: () -> T): T {
+inline fun <T> measureAndPrint(
+    limit: TimeUnit = TimeUnit.NANOSECONDS,
+    formatter: TimeUnitFormatter = TimeUnitFormatter.LONG,
+    roundingLast: MathContext = MathContext(1),
+    noinline transformation: ((String) -> String)? = null,
+    outputStream: PrintStream = System.out,
+    block: () -> T
+): T {
     measureAndReturn(block).let {
         it.first.humanize(limit, formatter, roundingLast, transformation).run(outputStream::println)
         return it.second
     }
 }
 
-fun Duration.humanize(limit: TimeUnit = TimeUnit.NANOSECONDS, formatter: TimeUnitFormatter = TimeUnitFormatter.LONG, roundingLast: MathContext = MathContext(1), transformation: ((String) -> String)? = null): String {
+fun Duration.humanize(
+    limit: TimeUnit = TimeUnit.NANOSECONDS,
+    formatter: TimeUnitFormatter = TimeUnitFormatter.LONG,
+    roundingLast: MathContext = MathContext(1),
+    transformation: ((String) -> String)? = null
+): String {
     val builder = StringBuilder()
     var nanos = abs().toNanos()
     var finished = false

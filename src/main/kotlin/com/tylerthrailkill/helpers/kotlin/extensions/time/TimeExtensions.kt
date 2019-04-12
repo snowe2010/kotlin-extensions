@@ -3,8 +3,14 @@
 package com.tylerthrailkill.helpers.kotlin.extensions.time
 
 import java.text.SimpleDateFormat
-import java.time.*
-import java.util.Date
+import java.time.DayOfWeek
+import java.time.Duration
+import java.time.LocalDate
+import java.time.LocalDateTime
+import java.time.LocalTime
+import java.time.Period
+import java.time.ZoneId
+import java.util.*
 
 object ago
 object fromNow
@@ -59,7 +65,9 @@ inline fun LocalDateTime.destructured(): Pair<LocalDate, LocalTime> = toLocalDat
 inline fun LocalDateTime.toDate(zoneId: ZoneId = ZoneId.systemDefault()): Date = Date.from(atZone(zoneId).toInstant())
 inline fun Date.toLocalDateTime(zoneId: ZoneId = ZoneId.systemDefault()): LocalDateTime = LocalDateTime.ofInstant(toInstant(), zoneId)
 
-inline fun String.parseDate(formatter: SimpleDateFormat = SimpleDateFormat(), zoneId: ZoneId = ZoneId.systemDefault()): LocalDateTime = formatter.parse(this).toLocalDateTime(zoneId)
+inline fun String.parseDate(formatter: SimpleDateFormat = SimpleDateFormat(), zoneId: ZoneId = ZoneId.systemDefault()): LocalDateTime =
+    formatter.parse(this).toLocalDateTime(zoneId)
+
 inline fun LocalDateTime.format(formatter: SimpleDateFormat = SimpleDateFormat(), zoneId: ZoneId = ZoneId.systemDefault()): String = formatter.format(toDate(zoneId))
 
 inline fun LocalDateTime.isMonday() = dayOfWeek == DayOfWeek.MONDAY
