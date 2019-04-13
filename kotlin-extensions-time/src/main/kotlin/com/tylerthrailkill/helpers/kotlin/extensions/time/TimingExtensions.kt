@@ -2,9 +2,8 @@
 
 package com.tylerthrailkill.helpers.kotlin.extensions.time
 
-import com.tylerthrailkill.helpers.kotlin.extensions.number.roundDiv
-import com.tylerthrailkill.helpers.kotlin.extensions.standard.with
 import java.io.PrintStream
+import java.math.BigDecimal
 import java.math.MathContext
 import java.time.Duration
 import java.util.concurrent.TimeUnit
@@ -112,3 +111,10 @@ fun Duration.humanize(
 
     return builder.toString().trim().with(transformation)
 }
+// extracted from StandardExtensions in order to make modules modular
+private inline infix fun <T> T.with(noinline block: (T.() -> T)?): T = block?.invoke(this) ?: this
+
+// extracted from BigNumberExtensions in order to make modules modular
+private inline fun Number.roundDiv(y: Number, mathContext: MathContext): BigDecimal = toBigDecimal().divide(y.toBigDecimal(), mathContext)
+private inline fun Number.toBigDecimal(mathContext: MathContext = MathContext.UNLIMITED) = toDouble().toBigDecimal(mathContext)
+private inline fun Double.toBigDecimal(mathContext: MathContext = MathContext.UNLIMITED) = BigDecimal(this, mathContext)
