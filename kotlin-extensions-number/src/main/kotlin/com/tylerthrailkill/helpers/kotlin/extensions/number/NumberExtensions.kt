@@ -4,7 +4,6 @@ package com.tylerthrailkill.helpers.kotlin.extensions.number
 
 import com.google.common.math.DoubleMath
 import com.google.common.math.LongMath
-import com.tylerthrailkill.helpers.kotlin.extensions.strings.toFixed
 import java.math.BigDecimal
 import java.math.RoundingMode
 
@@ -174,3 +173,6 @@ inline fun Float.nextDown(): Float = Math.nextDown(this)
 
 inline infix fun Double.scalb(scaleFactor: Int): Double = Math.scalb(this, scaleFactor)
 inline infix fun Float.scalb(scaleFactor: Int): Float = Math.scalb(this, scaleFactor)
+
+inline fun Double.toFixed(digits: Int): String = java.lang.String.format("%.${digits}f", this)
+inline fun Float.toFixed(digits: Int): String = toDouble().toFixed(digits)

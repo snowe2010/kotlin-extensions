@@ -5,7 +5,6 @@ package com.tylerthrailkill.helpers.kotlin.extensions.standard
 import arrow.data.Try
 import arrow.data.getOrDefault
 import arrow.data.getOrElse
-import com.tylerthrailkill.helpers.kotlin.extensions.preconditions.requireSize
 import java.io.PrintStream
 import java.math.BigDecimal
 import java.math.BigInteger
@@ -131,3 +130,27 @@ inline fun Try<Boolean>.getOrTrue() = getOrElse { true }
 inline fun Try<Boolean>.getOrFalse() = getOrElse { false }
 
 inline fun <T> Try<T>.getOrNull(): T? = getOrDefault { null }
+
+
+// duplicate preconditions here for modular modules
+// TODO get rid of these 
+inline fun <T> Array<T>.requireSize(size: Int): Array<T> = requireSize(size, "must be of size $size")
+inline fun <T> Array<T>.requireSize(size: Int, message: String = "must be of size $size", noinline elseBlock: Array<T>.() -> Unit = {}): Array<T> =
+    requireSize(size, IllegalArgumentException(message), elseBlock)
+
+inline fun <T> Array<T>.requireSize(size: Int, throwable: Throwable = IllegalArgumentException("must be of size $size"), noinline elseBlock: Array<T>.() -> Unit = {}): Array<T> =
+    require({ this.size == size }, throwable, elseBlock)
+
+inline fun <T> T.require(
+    requirement: T.() -> Boolean,
+    noinline throwable: T.() -> Throwable = { IllegalArgumentException("$this does not match requirements") },
+    noinline elseBlock: T.() -> Unit = {}
+): T = if (run(requirement)) this else {
+    run(elseBlock.with(this).andThrow(throwable()))
+}
+
+inline fun <T> T.require(
+    requirement: T.() -> Boolean,
+    throwable: Throwable = IllegalArgumentException("$this does not match requirements"),
+    noinline elseBlock: T.() -> Unit = {}
+): T = require(requirement, { throwable }, elseBlock)

@@ -1,5 +1,16 @@
 rootProject.name = "kotlin-extensions"
-include("kotlin-extensions-collections", "kotlin-extensions-time")
+include(
+    "kotlin-extensions-collections",
+    "kotlin-extensions-time",
+    "kotlin-extensions-strings",
+    "kotlin-extensions-standard",
+    "kotlin-extensions-bytes",
+    "kotlin-extensions-conversions",
+    "kotlin-extensions-html",
+    "kotlin-extensions-number",
+    "kotlin-extensions-preconditions",
+    "kotlin-extensions-tuples"
+)
 
 // TODO 
 //  buildscript {
