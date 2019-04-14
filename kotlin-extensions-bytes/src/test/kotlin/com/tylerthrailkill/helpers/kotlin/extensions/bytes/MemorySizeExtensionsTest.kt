@@ -6,6 +6,17 @@ import kotlin.test.assertEquals
 import kotlin.test.assertNotNull
 
 object MemorySizeExtensionsTest : Spek({
+    val byte = 8L
+    val kibibyte = 1024L*8L
+    val kilobyte = 1000L*8L
+    val mebibyte = 1024L*1024L*8L
+    val megabyte = 1000L*1000L*8L
+    val gibibyte = 1024L*1024L*1024L*8L
+    val gigabyte = 1000L*1000L*1000L*8L
+    val tebibyte = 1024L*1024L*1024L*1024L*8L
+    val terabyte = 1000L*1000L*1000L*1000L*8L
+    val pebibyte = 1024L*1024L*1024L*1024L*1024L*8L
+    val petabyte = 1000L*1000L*1000L*1000L*1000L*8L
     describe("getMemoryUsage should return something") {
         assertNotNull(getMemoryUsage().first)
         assertNotNull(getMemoryUsage().second)
@@ -300,7 +311,85 @@ object MemorySizeExtensionsTest : Spek({
     }
     describe("BitValue") {
         it("toBytes") {
-//            assertEquals(1, BitValue(8L).toBytes)
+            assertEquals(1, BitValue(byte).toBytes)
+        }
+        it("B") {
+            assertEquals(1, BitValue(byte).B)
+        }
+        it("toKibibytes") {
+            assertEquals(1, BitValue(kibibyte).toKibibytes)
+        }
+        it("toKilobytes") {
+            assertEquals(1, BitValue(kilobyte).toKilobytes)
+        }
+        it("KiB") {
+            assertEquals(1, BitValue(kibibyte).KiB)
+        }
+        it("KB") {
+            assertEquals(1, BitValue(kilobyte).KB)
+        }
+        it("toMebibytes") {
+            assertEquals(1, BitValue(mebibyte).toMebibytes)
+        }
+        it("toMegabytes") {
+            assertEquals(1, BitValue(megabyte).toMegabytes)
+        }
+        it("MiB") {
+            assertEquals(1, BitValue(mebibyte).MiB)
+        }
+        it("MB") {
+            assertEquals(1, BitValue(megabyte).MB)
+        }
+        it("toGibibytes") {
+            assertEquals(1, BitValue(gibibyte).toGibibytes)
+        }
+        it("toGigabytes") {
+            assertEquals(1, BitValue(gigabyte).toGigabytes)
+        }
+        it("GiB") {
+            assertEquals(1, BitValue(gibibyte).GiB)
+        }
+        it("GB") {
+            assertEquals(1, BitValue(gigabyte).GB)
+        }
+        it("toTebibytes") {
+            assertEquals(1, BitValue(tebibyte).toTebibytes)
+        }
+        it("toTerabytes") {
+            assertEquals(1, BitValue(terabyte).toTerabytes)
+        }
+        it("TiB") {
+            assertEquals(1, BitValue(tebibyte).TiB)
+        }
+        it("TB") {
+            assertEquals(1, BitValue(terabyte).TB)
+        }
+        it("toPebibytes") {
+            assertEquals(1, BitValue(pebibyte).toPebibytes)
+        }
+        it("toPetabytes") {
+            assertEquals(1, BitValue(petabyte).toPetabytes)
+        }
+        it("PiB") {
+            assertEquals(1, BitValue(pebibyte).PiB)
+        }
+        it("PB") {
+            assertEquals(1, BitValue(petabyte).PB)
+        }
+        it("plus") {
+            assertEquals(BitValue(1L), BitValue(0L).plus(BitValue(1L)))
+        }
+        it("minus") {
+            assertEquals(BitValue(1L), BitValue(2L).minus(BitValue(1L)))
+        }
+        it("times") {
+            assertEquals(BitValue(1L), BitValue(1L).times(1L))
+        }
+        it("div long") {
+            assertEquals(BitValue(1L), BitValue(1L).div(1L))
+        }
+        it("div BitValue") {
+            assertEquals(1L, BitValue(1L).div(BitValue(1L)))
         }
     }
 })

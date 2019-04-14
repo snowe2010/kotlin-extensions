@@ -3,9 +3,9 @@
 package com.tylerthrailkill.helpers.kotlin.extensions.bytes
 
 fun getMemoryUsage(transform: (Long, Long, Long, Long, Int) -> String = { total, free, max, usage, percent -> "$usage / $max MB in use ($percent%)" }): Pair<Int, String> {
-    val total = Runtime.getRuntime().totalMemory().bytes.toMegaBytes
-    val free = Runtime.getRuntime().freeMemory().bytes.toMegaBytes
-    val max = Runtime.getRuntime().maxMemory().bytes.toMegaBytes
+    val total = Runtime.getRuntime().totalMemory().bytes.toMegabytes
+    val free = Runtime.getRuntime().freeMemory().bytes.toMegabytes
+    val max = Runtime.getRuntime().maxMemory().bytes.toMegabytes
     val usage = total - free
     val percent = ((usage.toDouble() / max) * 100).toInt()
     return percent to transform(total, free, max, usage, percent)
@@ -109,15 +109,15 @@ data class BitValue internal constructor(val toBits: Long) {
     val toBytes = toBits / 8
     val B = toBytes
     val toKibibytes = toBytes / 1024
-    val toKiloBytes = toBytes / 1000
+    val toKilobytes = toBytes / 1000
     val KiB = toKibibytes
-    val KB = toKiloBytes
+    val KB = toKilobytes
     val toMebibytes = toKibibytes / 1024
-    val toMegaBytes = toKiloBytes / 1000
+    val toMegabytes = toKilobytes / 1000
     val MiB = toMebibytes
-    val MB = toMegaBytes
+    val MB = toMegabytes
     val toGibibytes = toMebibytes / 1024
-    val toGigabytes = toMegaBytes / 1000
+    val toGigabytes = toMegabytes / 1000
     val GiB = toGibibytes
     val GB = toGigabytes
     val toTebibytes = toGibibytes / 1024
