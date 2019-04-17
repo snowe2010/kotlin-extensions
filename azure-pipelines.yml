@@ -5,5 +5,5 @@ steps:
   - task: Gradle@2
     displayName: 'gradlew build'
     inputs:
-      gradleWrapperFile: '$(Parameters.wrapperScript)'
-      tasks: '$(Parameters.tasks)'
+      gradleWrapperFile: 'gradlew'
+      tasks: 'build'
